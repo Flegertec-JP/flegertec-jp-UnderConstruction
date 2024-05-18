@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Draggable.create(memberInner, {
       type: "x,y",
       edgeResistance: 1,
+      bounds: "html",
       onDragStart: function() { this.target.style.cursor = "grabbing"; },
       onDragEnd: function() { this.target.style.cursor = "grab"; }
     });

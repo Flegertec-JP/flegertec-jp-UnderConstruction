@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name=" レイヤー 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1354.68 290.65">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-3 {
+        font-family: PlusJakartaSans-Bold, 'Plus Jakarta Sans';
+        font-size: 297.5px;
+        font-weight: 700;
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        fill: #e1e1e1;
+      }
+
+      .cls-6 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" width="1354.68" height="290.65"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <text class="cls-3" transform="translate(-21.48 225.2)"><tspan class="cls-7" x="0" y="0">Flege</tspan><tspan class="cls-9" x="792.53" y="0">r</tspan><tspan class="cls-6" x="905.28" y="0">t</tspan><tspan class="cls-8" x="1023.68" y="0">ec</tspan></text>
+    </clipPath>
+  </defs>
+  <g class="cls-1">
+    <g class="cls-5">
+      <rect class="cls-4" x="0" y="-1.89" width="1354.68" height="290.65"/>
+    </g>
+  </g>
+</svg>

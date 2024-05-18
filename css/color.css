@@ -1,18 +1,46 @@
 
-.is-SK0528JP{ 
-  background-color: #007a75;
+:root {
+  /* --main-bg: #2c2e35; */
+  --main-bg: #121112;
+  --main-color: #e1e1e1; 
+  /* --main-color: #e1e1e1;  */
+  --grid-color: rgb(132, 33, 138); 
+}
+
+
+/* .is-SK0528JP{ 
+  background-color: #007a75!important;
 }
 
 .is-egger{ 
-  /* background-color: #45ada5; */
-  background-color: #3c7974;
+  background-color: #3c7974!important;
 }
 
 .is-aAa{ 
-  /* background-color: #45ada5; */
-  background-color: #404d62ff;
+  background-color: #404d62ff!important;
 }
 
 .is-Huri{
-  background-color: #009900;
+  background-color: #009900!important;
 }
+
+.is-egger{ 
+  background-color: #45ada5!important;
+} */
+
+
+/* .is-shaddow-SK0528JP{ 
+  box-shadow: 0px 0px 5px 0px rgba(0, 122, 118, 1)!important;
+}
+
+.is-shaddow-egger{ 
+  box-shadow: 0px 0px 5px 0px rgba(60, 121, 116, 1)!important;
+}
+
+.is-shaddow-aAa{
+  box-shadow: 0px 0px 5px 0px rgba(120, 144, 156, 1)!important;
+}
+
+.is-shaddow-Huri{
+  box-shadow: 0px 0px 5px 0px rgba(0, 153, 0, 1)!important;
+} */
