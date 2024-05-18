@@ -74,5 +74,4 @@ img {
   -khtml-user-drag: none; /* Konqueror */
   -moz-user-drag: none; /* Firefox */
   -o-user-drag: none; /* Presto */
-  user-drag: none; /* Standard syntax */
 }
