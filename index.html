@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/developer.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script> 
   </head>
-  <body> <!--拡張機能とかも同期なんかな？-->
+  <body>
 
     <!-- <section class="loading">
       <div class="loading-content">
@@ -31,10 +31,13 @@
     <main class="desktop">
       <!-- Frame -->
       <div class="frame-top">
-        <a class="Frame-link" href="https://bsky.app/profile/flegertec-jp.github.io" target="_blank">BlueSky</a>
-        <a class="Frame-link" href="https://x.com/Flegertec" target="_blank">Twitter</a>
-        <a class="Frame-link" href="https://github.com/Flegertec-JP" target="_blank">Github</a>
-        <a class="Frame-link" href="mailto:flegertec@gmail.com">Mail</a>
+				<a href="index.html">
+					<img src="SVG/flegertec_logo.svg" style="height: 1rem; fill: #42AFE3;" alt="Logo">
+				</a>
+				<a class="frame-text" href="about.html">
+          ABOUT
+				</a>
+        <!-- <p class="frame-text">Unauthorized copying prohibited.</p> -->
       </div>
       <div class="frame">
         <div class="frame-line-top"></div>
@@ -46,7 +49,6 @@
       <div class="frame-right"></div>
       <div class="frame-bottom">
         <p class="frame-text">Programming team</p>
-        <p class="frame-text">Flegertec JP</p>
         <div class="indicator-container">
           <div class="indicator-counter-container">
             <span class="indicator-text" id="indicator-counter"></span>
@@ -57,38 +59,241 @@
           </div>
         </div>
       </div>
+
+      <!-- Flegertec-Top -->
+      <section class="section">
+        <div style=" display: flex; justify-content: space-between;">
+          <img src="SVG/flegertec_logo.svg" style="width : calc(var(--column-width) * 6);" alt="Logo">
+          <p style="text-align: right;">
+            Programming Team
+            <br>
+            We are doing Web production
+            <br>
+            We are recruiting members
+          </p>
+        </div>
+      </section>
+  
+      <!-- Work -->
+      <section class="section">
+        <div class="section-body">
+          <div class="container">
+            <h1 class="title">
+              Work
+              <span class="text" style="color: #999;">
+                （Representative work）
+              </span>
+            </h1>
+            <ul class="works">
+              <li class="work">
+                <a class="work-inner" href="https://sk0528jp.github.io/uuid/" target="_blank">   
+                  <span class="link-sign">></span>               
+                  <h1 class="title" style="font-size: 1.5rem;">
+                    UUID Generator
+                  </h1>
+                  <h1 style="font-size: 1.5rem;">2024</h1>
+                </a>
+              </li>
+              <li class="work">
+                <a class="work-inner" href="https://sk0528jp.github.io/uuid/" target="_blank">                  
+                  <h1 class="title" style="font-size: 1.5rem;">
+                    Caesar Cipher Conversion
+                  </h1>
+                  <span class="link-sign">></span>
+                  <h1 style="font-size: 1.5rem;">2024</h1>
+                </a>
+              </li>
+              <li class="work">
+                <a class="work-inner" href="https://sk0528jp.github.io/uuid/" target="_blank">                  
+                  <h1 class="title" style="font-size: 1.5rem;">
+                    UUID Generator
+                  </h1>
+                  <span class="link-sign">></span>
+                  <h1 style="font-size: 1.5rem;">2024</h1>
+                </a>
+              </li>
+              <!-- <li class="work">
+                <a href="https://sk0528jp.github.io/caesar/" target="_blank">Caesar Cipher Conversion</a>
+              </li>
+              <li class="work">
+                <a href="https://sk0528jp.github.io/temperature-conversion/" target="_blank">Celsius/Fahrenheit Conversion</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Member -->
+      <!-- <section class="section is-fullheight">
+        <div class="section-body">
+          <div class="container">
+            <h1 class="title">Member</h1>
+            <div x-data="{
+              SK0528JP: false, 
+              Egger: false,
+              Huri: false,
+              aAa: false,
+            }">
+            
+              <div class="members">
+                <p class="member-open">
+                  <a @click="SK0528JP = true" x-show="!SK0528JP">SK0528JP</a>
+                  <a @click="SK0528JP = false" x-show="SK0528JP">&times;</a>
+                </p>
+                <p class="member-open">
+                  <a @click="Egger = true" x-show="!Egger">Egger</a>
+                  <a @click="Egger = false" x-show="Egger">&times;</a>
+                </p>
+                <p class="member-open">
+                  <a @click="Huri = true" x-show="!Huri">Hurisan</a>
+                  <a @click="Huri = false" x-show="Huri">&times;</a>
+                </p>
+                <p class="member-open">
+                  <a @click="aAa = true" x-show="!aAa">Atuatu Hhakumai</a>
+                  <a @click="aAa = false" x-show="aAa">&times;</a>
+                </p>
+              </div>
+            
+              <div class="member is-shaddow-SK0528JP" x-show="SK0528JP" data-member="SK0528JP"  @click="updateZIndex('SK0528JP')">
+                <div class="member-tab is-SK0528JP">
+                  <div class="member-title"> 
+                    <img class="icon" src="image/SKO.png" alt="">
+                    <span>
+                      SK0528JP
+                    </span>
+                  </div>
+                  <div class="member-close" @click="SK0528JP = false">
+                    <span>&times;</span>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h1>SK0528JP</h1>
+                  <div class="member-bio">
+                    HTML,CSS,JSで色々作ってる学生プログラマー
+                  </div>
+                  <div class="member-links">
+                    <a href="https://bsky.app/profile/sk0528jp.github.io" target="_blank">BlueSky</a>
+                    <a href="https://sk0528jp.github.io/" target="_blank">Website</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="member is-shaddow-egger" x-show="Egger" data-member="Egger"  @click="updateZIndex('Egger')">
+                <div class="member-tab is-egger">
+                  <div class="member-title"> 
+                    <img class="icon" src="image/Egger.jpeg" alt="">
+                    <span>
+                      Egger
+                    </span>
+                  </div>
+                  <div class="member-close" @click="Egger = false">
+                    <span>&times;</span>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h1>Egger</h1>
+                  <div class="member-bio">
+                    山登りとVScodeが大好きな人
+                  </div>
+                  <div class="member-links">
+                    <a href="https://twitter.com/eggertotamago" target="_blank">Twitter</a>
+                    <a href="https://eggerjp.github.io/Just-my-hoby-site/Aboumeページ.html" target="_blank">Website</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="member is-shaddow-Huri" x-show="Huri" data-member="Huri"  @click="updateZIndex('Huri')">
+                <div class="member-tab is-Huri">
+                  <div class="member-title"> 
+                    <img class="icon" src="image/Huri.png" alt="">
+                    <span>
+                      Hurisan
+                    </span>
+                  </div>
+                  <div class="member-close" @click="Huri = false">
+                    <span>&times;</span>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h1>フリさん</h1>
+                  <div class="member-bio">
+                    頭悪いがプログラマーを目指してる人
+                  </div>
+                  <div class="member-links">
+                    <a href="https://hurisan0909.github.io/huriprofile/profile.htm" target="_blank">Profile</a>
+                    <a href="https://hurisan0909.github.io/HuriWeb/" target="_blank">Website</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="member is-shaddow-aAa" x-show="aAa" data-member="aAa"  @click="updateZIndex('aAa')">
+                <div class="member-tab is-aAa">
+                  <div class="member-title"> 
+                    <img class="icon" src="image/Atuatu_Hhakumai.jpg" alt="">
+                    <span>
+                      Atuatu_Hhakumai
+                    </span>
+                  </div>
+                  <div class="member-close" @click="aAa = false">
+                    <span>&times;</span>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h1>Atuatu_Hhakumai</h1>
+                  <div class="member-bio">
+                    Webサイトを作ったりするのが趣味！
+                  </div>
+                  <div class="member-links">
+                    <a href="https://twitter.com/Atuatu_Hhakumai" target="_blank">Twitter</a>
+                    <a href="https://atuatu-hhakumai.github.io" target="_blank">Website</a>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+    
+    <main class="tablet">
+      <!-- Frame -->
+      <div class="frame-top"></div>
       <div class="frame">
         <div class="frame-line-top"></div>
         <div class="frame-line-left"></div>
         <div class="frame-line-right"></div>
         <div class="frame-line-bottom"></div>
       </div>
-
-      <!-- Flegertec-Top -->
-      <section class="section is-fullheight">
-        <div class="section-body">
-          <div class="container">
-            <img src="SVG/flegertec_logo.svg" style="width : calc(var(--column-width) * 6);" alt="Logo">
+      <div class="frame-left"></div>
+      <div class="frame-right"></div>
+      <div class="frame-bottom">
+        <p class="frame-text">Programming team</p>
+        <div class="indicator-container">
+          <div class="indicator-counter-container">
+            <span class="indicator-text" id="indicator-counter"></span>
+            <span class="indicator-text" style="margin-right: 0.1rem;">%</span>
+          </div>
+          <div class="indicator">
+            <div class="indicator-inner"></div>
           </div>
         </div>
+      </div>
+
+      <!-- Flegertec-Top -->
+      <section class="section">
+        <img src="SVG/flegertec_logo.svg" style="width : calc(var(--column-width) * 12);" alt="Logo">
+
       </section>
   
       <!-- About -->
-      <!-- <section class="section is-fullheight">
+      <section class="section">
         <div class="section-body">
           <div class="container">
             <h1 class="title">About</h1>
-            <h2 class="subtitle">Coming Soon…</h2>
-          </div>
-        </div>
-      </section> -->
-  
-      <!-- Work -->
-      <section class="section is-fullheight">
-        <div class="section-body">
-          <div class="container">
-            <h1 class="title">Work</h1>
-            <h2 class="subtitle">Coming Soon…</h2>
+            <h2 class="subtitle">
+              <img src="SVG/flegertec_logo.svg" style="height:1rem" alt="">は、主にHTML,CSS,JavaScriptを使っていろいろ作
+            </h2>
           </div>
         </div>
       </section>
@@ -224,28 +429,26 @@
           </div>
         </div>
       </section>
-      
-      <!-- Join us -->
-      <section class="section is-fullheight">
-        <div class="section-body">
-          <div class="container">
-            <h1 class="title">Join us</h1>
-          </div>
-        </div>
-      </section>
-
     </main>
-    
+
     <main class="mobile">
+      <!-- Frame -->
+      <div class="frame-top"></div>
+      <div class="frame">
+        <div class="frame-line-top"></div>
+        <div class="frame-line-left"></div>
+        <div class="frame-line-right"></div>
+        <div class="frame-line-bottom"></div>
+      </div>
+      <div class="frame-left"></div>
+      <div class="frame-right"></div>
+      <div class="frame-bottom">
+      </div>
+
       <!-- Flegertec-Top -->
       <section class="section is-fullheight">
-        <div class="section-body">
-          <div class="container">
-            <h1 class="title">Flegertec</h1>
-            <h2 class="subtitle">Programming team</h2>
-            <h2 class="subtitle">Coming Soon…</h2>
-          </div>
-        </div>
+        <img src="SVG/flegertec_logo.svg" style="width : calc(var(--column-width) * 12);" alt="Logo">
+        <h2 class="subtitle">モバイル未対応</h2>
       </section>
     </main>
 
@@ -280,6 +483,7 @@
         }
       });
     </script>
+    <!-- コメントアウトEnd -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
     <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>

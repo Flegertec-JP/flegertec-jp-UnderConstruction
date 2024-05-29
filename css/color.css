@@ -1,11 +1,4 @@
 
-:root {
-  /* --main-bg: #2c2e35; */
-  --main-bg: #121112;
-  --main-color: #e1e1e1; 
-  /* --main-color: #e1e1e1;  */
-  --grid-color: rgb(132, 33, 138); 
-}
 
 
 /* .is-SK0528JP{ 
@@ -26,7 +19,12 @@
 
 .is-egger{ 
   background-color: #45ada5!important;
-} */
+} 
+
+.is-khaua{
+  background-color: #009456!important;
+}
+*/
 
 
 /* .is-shaddow-SK0528JP{ 
