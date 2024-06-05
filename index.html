@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/frame.css">
-    <link rel="stylesheet" href="css/developer.css">
+    <link rel="stylesheet" href="css/grid.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script> 
   </head>
   <body>
@@ -31,12 +31,11 @@
     <main class="desktop">
       <!-- Frame -->
       <div class="frame-top">
-				<a href="index.html">
-					<img src="SVG/flegertec_logo.svg" style="height: 1rem; fill: #42AFE3;" alt="Logo">
-				</a>
+				<!-- <a class="frame-text" href="index.html">
+          Flegertec
 				<a class="frame-text" href="about.html">
           ABOUT
-				</a>
+				</a> -->
         <!-- <p class="frame-text">Unauthorized copying prohibited.</p> -->
       </div>
       <div class="frame">
@@ -48,7 +47,7 @@
       <div class="frame-left"></div>
       <div class="frame-right"></div>
       <div class="frame-bottom">
-        <p class="frame-text">Programming team</p>
+        <!-- <p class="frame-text">Programming team</p>
         <div class="indicator-container">
           <div class="indicator-counter-container">
             <span class="indicator-text" id="indicator-counter"></span>
@@ -57,22 +56,25 @@
           <div class="indicator">
             <div class="indicator-inner"></div>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!-- Flegertec-Top -->
-      <section class="section">
+      <header class="section header">
         <div style=" display: flex; justify-content: space-between;">
-          <img src="SVG/flegertec_logo.svg" style="width : calc(var(--column-width) * 6);" alt="Logo">
+					<img src="src/svg/flegertec.svg" style="height : calc(1rem * 6);" alt="Logo">
           <p style="text-align: right;">
             Programming Team
             <br>
             We are doing Web production
             <br>
             We are recruiting members
+            <br>
+            <br>
+            ↓↓↓　SCROLL DOWN　↓↓↓
           </p>
         </div>
-      </section>
+      </header>
   
       <!-- Work -->
       <section class="section">
@@ -87,52 +89,72 @@
             <ul class="works">
               <li class="work">
                 <a class="work-inner" href="https://sk0528jp.github.io/uuid/" target="_blank">   
-                  <span class="link-sign">></span>               
-                  <h1 class="title" style="font-size: 1.5rem;">
-                    UUID Generator
-                  </h1>
+                  <div class="work-title">
+                    <div class="work-sign"></div>               
+                    <p class="title">
+                      UUID Generator
+                    </p>
+                  </div>
                   <h1 style="font-size: 1.5rem;">2024</h1>
                 </a>
               </li>
               <li class="work">
-                <a class="work-inner" href="https://sk0528jp.github.io/uuid/" target="_blank">                  
-                  <h1 class="title" style="font-size: 1.5rem;">
-                    Caesar Cipher Conversion
-                  </h1>
-                  <span class="link-sign">></span>
+                <a class="work-inner" href="https://sk0528jp.github.io/caesar/" target="_blank">       
+                  <div class="work-title">
+                    <div class="work-sign"></div>                          
+                    <h1 class="title">
+                      Caesar Cipher Conversion
+                    </h1>
+                  </div>
                   <h1 style="font-size: 1.5rem;">2024</h1>
                 </a>
               </li>
               <li class="work">
-                <a class="work-inner" href="https://sk0528jp.github.io/uuid/" target="_blank">                  
-                  <h1 class="title" style="font-size: 1.5rem;">
-                    UUID Generator
-                  </h1>
-                  <span class="link-sign">></span>
+                <a class="work-inner" href="https://sk0528jp.github.io/temperature-conversion/" target="_blank">
+                  <div class="work-title">
+                    <div class="work-sign"></div>                                
+                    <h1 class="title">
+                      Celsius/Fahrenheit Conversion
+                    </h1>
+                  </div>
                   <h1 style="font-size: 1.5rem;">2024</h1>
                 </a>
               </li>
-              <!-- <li class="work">
-                <a href="https://sk0528jp.github.io/caesar/" target="_blank">Caesar Cipher Conversion</a>
-              </li>
-              <li class="work">
-                <a href="https://sk0528jp.github.io/temperature-conversion/" target="_blank">Celsius/Fahrenheit Conversion</a>
-              </li> -->
             </ul>
           </div>
         </div>
       </section>
 
+      <!-- About -->
+      <section class="section">
+        <div class="section-body">
+          <div class="container">
+            <h1 class="title">About US</h1>
+            <div class="title-border"></div>
+            <p class="article" style="font-size: 1.5rem;">
+              <img src="src/svg/flegertec.svg" style="height: 1rem; display: inline-block;" alt="Flegertec">
+              は主にWeb制作をするプログラミングチーム。
+              <br>
+              「プログラミング」はもちろん、「動画制作」や「画像編集」、「音声/音楽制作」
+              <br>
+              のできる方まで様々なメンバーを常時募集中。
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- Member -->
-      <!-- <section class="section is-fullheight">
+      <section class="section">
         <div class="section-body">
           <div class="container">
             <h1 class="title">Member</h1>
+            <div class="title-border"></div>
             <div x-data="{
               SK0528JP: false, 
               Egger: false,
               Huri: false,
               aAa: false,
+              khaua: false,
             }">
             
               <div class="members">
@@ -151,6 +173,10 @@
                 <p class="member-open">
                   <a @click="aAa = true" x-show="!aAa">Atuatu Hhakumai</a>
                   <a @click="aAa = false" x-show="aAa">&times;</a>
+                </p>
+                <p class="member-open">
+                  <a @click="khaua = true" x-show="!khaua">khaua(かはうあ)</a>
+                  <a @click="khaua = false" x-show="khaua">&times;</a>
                 </p>
               </div>
             
@@ -241,7 +267,7 @@
                 <div class="member-content">
                   <h1>Atuatu_Hhakumai</h1>
                   <div class="member-bio">
-                    Webサイトを作ったりするのが趣味！
+                    Webサイトに興味があります！
                   </div>
                   <div class="member-links">
                     <a href="https://twitter.com/Atuatu_Hhakumai" target="_blank">Twitter</a>
@@ -250,10 +276,45 @@
                 </div>
               </div>
   
+              <div class="member is-shaddow-khaua" x-show="khaua" data-member="khaua">
+                <div class="member-tab is-khaua">
+                  <div class="member-title"> 
+                    <img class="icon" src="image/445_20230927232914.png" alt="">
+                    <span>
+                    	khaua(かはうあ)
+                    </span>
+                  </div>
+                  <div class="member-close" @click="khaua = false">
+                    <span>&times;</span>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h1>khaua(かはうあ)</h1>
+                  <div class="member-bio">
+                    ブラジル在住の任天堂入社を目指してる
+										<br>
+										プログラミング初心者
+                  </div>
+                  <div class="member-links">
+                    <a href="https://x.com/khaua0729?s=21&t=sQ4dJnlB1vQu7TiWjNaiew" target="_blank">Twitter</a>
+                  </div>
+                </div>
+              </div>
+  
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
+
+      <!-- About -->
+      <section class="section">
+        <div class="section-body">
+          <div class="container">
+            <img src="src/svg/flegertec.svg" style="width: calc(var(--column-width) * 12);" alt="">
+          </div>
+        </div>
+      </section>
+
     </main>
     
     <main class="tablet">

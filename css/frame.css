@@ -57,14 +57,12 @@
 }
 
 .frame-text{
-  font-family: 'Array';
   font-size: 1rem;
   color: var(--frame-line-bg);
 }
 
 .indicator-text {
   font-size: 1rem;
-  font-family: 'Array';
   color: var(--frame-line-bg);
 }
 

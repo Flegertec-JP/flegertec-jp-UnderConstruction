@@ -1,4 +1,3 @@
-
 // 高さをデバイスの画面ピッタリに
 const fullHeight = () => {
   const vh = window.innerHeight * 0.01;
@@ -70,29 +69,43 @@ links.forEach((link) => {
 const workInners = document.querySelectorAll(".work-inner");
 
 workInners.forEach((workInner) => {
-  const lines = workInner.querySelector(".work-hover-line");
-  const sign = workInner.querySelector(".link-sign");
+  const sign = workInner.querySelector(".work-sign");
   const title = workInner.querySelector(".title");
-  
-  workInner.addEventListener('mouseenter', () => {
+
+  workInner.addEventListener('mousemove', () => {
     gsap.to(title, { 
-      duration: 0.05,
+      duration: 0.08,
       delay: 0,
-      marginLeft: "2rem",
-      // ease: "expo.in",
+      x: "2rem",
+    });
+    gsap.to(sign, { 
+      duration: 0,
+      delay: 0,
+      opacity: 1,
     });
   });
-
   workInner.addEventListener('mouseleave', () => {
     gsap.to(title, { 
-      duration: 0.05,
+      duration: 0.1,
       delay: 0,
-      marginLeft: "0rem",
-      // ease: "power2.out",
+      x: "0rem",
+    });
+    gsap.to(sign, { 
+      duration: 0,
+      delay: 0,
+      opacity: 0,
     });
   });
 });
 
+
+gsap.to(".header" , {
+  y: "70%",
+  scrollTrigger: {
+    trigger: "#container-1",
+		scrub: 0.03,
+  },
+});
 
 // カラムの幅を取得
 function updateColmnWidth() {

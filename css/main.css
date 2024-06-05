@@ -17,26 +17,6 @@ body{
 }
 
 @font-face {
-  font-family: 'DotGothic16';
-  font-weight: 400;
-  src: url('../font/DotGothic16-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'IBMPlexMono';
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-  src: url('../font/IBMPlexMono-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Array';
-  font-weight: 400;
-  src: url('../font/Array-Regular.woff2') format('woff2');
-}
-
-@font-face {
   font-family: 'Satoshi';
   font-weight: 400;
   font-display: swap;
@@ -45,18 +25,10 @@ body{
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-  src: url('../font/Main/SawarabiGothic-Regular.woff2') format('woff2');
-}
-
-/* @font-face {
   font-family: 'NotoSansJP';
   font-weight: 400;
   src: url('../font/Main/NotoSansJP.woff2') format('woff2');
-} */
+}
 
 /* スマホ */
 @media only screen and (max-width: 400px) {
@@ -143,9 +115,10 @@ has-text-allow-copying{
   display: grid;
 }
 
-.member-open{
+.member-open a{
   margin: 0;
-  line-height: 1.1;
+  line-height: 2;
+  font-size: 1rem;
 }
 
 .section {
@@ -178,8 +151,20 @@ has-text-allow-copying{
 
 .title {
   font-size: 3.1rem;
-  line-height: 1; 
+  line-height: 1;
   font-family: 'PlusJakartaSans';
+}
+
+.title-border{
+  margin-top: 1rem;
+  height: 0.5px;
+  background-color: var(--main-color);
+  width: calc(var(--column-width) * 12);
+}
+
+.user-select{
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 .works{
@@ -187,9 +172,7 @@ has-text-allow-copying{
   width: calc(var(--column-width) * 12);
 }
 
-.work{
-  width: calc(var(--column-width) * 12);
-}
+.work{ width: calc(var(--column-width) * 12); }
 
 .work a{
   cursor: pointer;
@@ -199,16 +182,29 @@ has-text-allow-copying{
   border-bottom: solid 0.5px var(--main-color);
   height: calc(var(--frame-height) * 2);
   width: calc(var(--column-width) * 12);
+}
+
+.work-title{
+  display: flex;
+  align-items: center;
+}
+
+.work-title .title{
+  line-height: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
   font-family: "satoshi";
 }
 
 .work:first-child{ border-top: solid 0.5px var(--main-color); }
 
-.link-sign{
-  font-size: 2rem;
-  display: none;
+.work-sign{
+  height: 1rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: var(--main-color);
+  position: absolute;
   opacity: 0;
-  line-height: 1;
 }
 
 /* .work-hover-line{
