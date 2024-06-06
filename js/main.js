@@ -31,18 +31,8 @@ const indicatorCounter = document.getElementById('indicator-counter');
 
 // インジゲーターをスクロールと連動して100%の幅にする。
 gsap.to(indicatorInner , {
-  width: "100%",
+  height: "100%",
   scrollTrigger: { scrub: true },
-});
-
-// インジゲーターと連動するカウンター
-gsap.to(indicatorCounter, {
-  innerHTML: 100,
-  snap: 'innerHTML',
-  scrollTrigger: { scrub: 0.4, },
-  onUpdate: function() {
-    let currentValue = Math.round(this.targets()[0].innerHTML);
-  }
 });
 
 // aタグホバー
@@ -55,6 +45,7 @@ links.forEach((link) => {
       delay: 0,
       color: "var(--hover-color)",
     });
+    link.style.cursor = 'pointer';
   });
   link.addEventListener('mouseleave', () => {
     gsap.to(link, {
@@ -62,6 +53,7 @@ links.forEach((link) => {
       delay: 0,
       color: "var(--main-color)",
     });
+    link.style.cursor = 'defalut';
   });
 });
 
@@ -73,6 +65,7 @@ workInners.forEach((workInner) => {
   const title = workInner.querySelector(".title");
 
   workInner.addEventListener('mousemove', () => {
+    workInner.style.cursor = 'pointer';
     gsap.to(title, { 
       duration: 0.08,
       delay: 0,
@@ -85,6 +78,7 @@ workInners.forEach((workInner) => {
     });
   });
   workInner.addEventListener('mouseleave', () => {
+    workInner.style.cursor = 'defalut';
     gsap.to(title, { 
       duration: 0.1,
       delay: 0,

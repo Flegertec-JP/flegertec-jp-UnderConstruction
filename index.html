@@ -30,6 +30,12 @@
 
     <main class="desktop">
       <!-- Frame -->
+      <div class="frame">
+        <div class="frame-line-top"></div>
+        <div class="frame-line-left"></div>
+        <div class="frame-line-right"></div>
+        <div class="frame-line-bottom"></div>
+      </div>
       <div class="frame-top">
 				<!-- <a class="frame-text" href="index.html">
           Flegertec
@@ -38,31 +44,20 @@
 				</a> -->
         <!-- <p class="frame-text">Unauthorized copying prohibited.</p> -->
       </div>
-      <div class="frame">
-        <div class="frame-line-top"></div>
-        <div class="frame-line-left"></div>
-        <div class="frame-line-right"></div>
-        <div class="frame-line-bottom"></div>
-      </div>
       <div class="frame-left"></div>
-      <div class="frame-right"></div>
-      <div class="frame-bottom">
-        <!-- <p class="frame-text">Programming team</p>
+      <div class="frame-right">
         <div class="indicator-container">
-          <div class="indicator-counter-container">
-            <span class="indicator-text" id="indicator-counter"></span>
-            <span class="indicator-text" style="margin-right: 0.1rem;">%</span>
-          </div>
           <div class="indicator">
             <div class="indicator-inner"></div>
           </div>
-        </div> -->
+        </div>
       </div>
+      <div class="frame-bottom"></div>
 
       <!-- Flegertec-Top -->
       <header class="section header">
         <div style=" display: flex; justify-content: space-between;">
-					<img src="src/svg/flegertec.svg" style="height : calc(1rem * 6);" alt="Logo">
+					<img src="src/svg/flegertec.svg" style="height : 8rem;" alt="Logo">
           <p style="text-align: right;">
             Programming Team
             <br>
@@ -131,7 +126,7 @@
           <div class="container">
             <h1 class="title">About US</h1>
             <div class="title-border"></div>
-            <p class="article" style="font-size: 1.5rem;">
+            <p class="article" style="font-size: 1.7rem; line-height: 2;">
               <img src="src/svg/flegertec.svg" style="height: 1rem; display: inline-block;" alt="Flegertec">
               は主にWeb制作をするプログラミングチーム。
               <br>
@@ -183,7 +178,7 @@
               <div class="member is-shaddow-SK0528JP" x-show="SK0528JP" data-member="SK0528JP"  @click="updateZIndex('SK0528JP')">
                 <div class="member-tab is-SK0528JP">
                   <div class="member-title"> 
-                    <img class="icon" src="image/SKO.png" alt="">
+                    <img class="icon" src="src/image/SK.png" alt="">
                     <span>
                       SK0528JP
                     </span>
@@ -207,7 +202,7 @@
               <div class="member is-shaddow-egger" x-show="Egger" data-member="Egger"  @click="updateZIndex('Egger')">
                 <div class="member-tab is-egger">
                   <div class="member-title"> 
-                    <img class="icon" src="image/Egger.jpeg" alt="">
+                    <img class="icon" src="src/image/Egger.jpeg" alt="">
                     <span>
                       Egger
                     </span>
@@ -231,7 +226,7 @@
               <div class="member is-shaddow-Huri" x-show="Huri" data-member="Huri"  @click="updateZIndex('Huri')">
                 <div class="member-tab is-Huri">
                   <div class="member-title"> 
-                    <img class="icon" src="image/Huri.png" alt="">
+                    <img class="icon" src="src/image/Huri.png" alt="">
                     <span>
                       Hurisan
                     </span>
@@ -255,7 +250,7 @@
               <div class="member is-shaddow-aAa" x-show="aAa" data-member="aAa"  @click="updateZIndex('aAa')">
                 <div class="member-tab is-aAa">
                   <div class="member-title"> 
-                    <img class="icon" src="image/Atuatu_Hhakumai.jpg" alt="">
+                    <img class="icon" src="src/image/Atuatu_Hhakumai.jpg" alt="">
                     <span>
                       Atuatu_Hhakumai
                     </span>
@@ -279,7 +274,7 @@
               <div class="member is-shaddow-khaua" x-show="khaua" data-member="khaua">
                 <div class="member-tab is-khaua">
                   <div class="member-title"> 
-                    <img class="icon" src="image/445_20230927232914.png" alt="">
+                    <img class="icon" src="src/image/khaua.png" alt="">
                     <span>
                     	khaua(かはうあ)
                     </span>
@@ -307,12 +302,12 @@
       </section>
 
       <!-- About -->
-      <section class="section">
-        <div class="section-body">
+      <footer class="footer">
+        <div class="footer-body">
           <div class="container">
-            <img src="src/svg/flegertec.svg" style="width: calc(var(--column-width) * 12);" alt="">
           </div>
         </div>
+        <img src="src/svg/flegertec.svg" style="width: 100%;" alt="">
       </section>
 
     </main>

@@ -65,12 +65,8 @@ a{
   text-decoration: none;
   font-size: var(---main-font--size);
   line-height: 1.3;
-  cursor: pointer;
+  cursor: default;
 }
-
-/* a:hover{
-  color: #555;
-} */
 
 .article{
   margin-top: var(--frame-height);
@@ -96,14 +92,19 @@ a{
   max-width: 1000px!important;
 }
 
-/* .dot::after{
-  content: "";
-  width: 0.5rem;
-  aspect-ratio: 1/1;
-  display: inline-block;
-  border-radius: 100%;
-  background-color: currentColor;
-} */
+.footer {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  padding: calc(var(--frame-height) * 0.7)  var(--frame-height);
+}
+
+.footer-body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
 
 has-text-allow-copying{
   -webkit-user-select: initial;
@@ -175,7 +176,6 @@ has-text-allow-copying{
 .work{ width: calc(var(--column-width) * 12); }
 
 .work a{
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
