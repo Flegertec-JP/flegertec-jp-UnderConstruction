@@ -28,11 +28,12 @@ if (mobile && desktop) {
 // スクロールインジゲーター
 const indicatorInner = document.querySelectorAll(".indicator-inner");
 const indicatorCounter = document.getElementById('indicator-counter');
-
-// インジゲーターをスクロールと連動して100%の幅にする。
+// スクロールと連動してインジゲーターの高さを１００％に
 gsap.to(indicatorInner , {
   height: "100%",
-  scrollTrigger: { scrub: true },
+  scrollTrigger: {
+    scrub: 0.3,
+  },
 });
 
 // aタグホバー
@@ -40,8 +41,7 @@ const links = document.querySelectorAll("a");
 
 links.forEach((link) => {
   link.addEventListener('mousemove', () => {
-    gsap.to(link, { 
-      duration: 1,
+    gsap.to(link, {
       delay: 0,
       color: "var(--hover-color)",
     });
@@ -49,7 +49,6 @@ links.forEach((link) => {
   });
   link.addEventListener('mouseleave', () => {
     gsap.to(link, {
-      duration: 1,
       delay: 0,
       color: "var(--main-color)",
     });
@@ -58,13 +57,14 @@ links.forEach((link) => {
 });
 
 // リストホバー
-const workInners = document.querySelectorAll(".work-inner");
+const works = document.querySelectorAll(".work")
 
-workInners.forEach((workInner) => {
+works.forEach((work) => {
+  const workInner = work.querySelector(".work-inner");
   const sign = workInner.querySelector(".work-sign");
   const title = workInner.querySelector(".title");
 
-  workInner.addEventListener('mousemove', () => {
+  workInner.addEventListener('mouseenter', () => {
     workInner.style.cursor = 'pointer';
     gsap.to(title, { 
       duration: 0.08,
@@ -94,7 +94,7 @@ workInners.forEach((workInner) => {
 
 
 gsap.to(".header" , {
-  y: "70%",
+  y: "60%",
   scrollTrigger: {
     trigger: "#container-1",
 		scrub: 0.03,
@@ -105,11 +105,24 @@ gsap.to(".header" , {
 function updateColmnWidth() {
   var column = document.getElementsByClassName('grid-column')[0];
   if (column) {
-    var newWidth = column.offsetWidth;
-    document.documentElement.style.setProperty("--column-width", `${newWidth}px`);
-    console.log(newWidth)
+    var newColmnWidth = column.offsetWidth;
+    document.documentElement.style.setProperty("--column-width", `${newColmnWidth}px`);
+    console.log('ColmnWIdth:', newColmnWidth,)
   };
 };
-// 初期読み込み時に幅を設定
+// リサイズ時の処理
 updateColmnWidth();
 window.addEventListener('resize', updateColmnWidth);
+
+// テキスト
+function updateHeaderHeight() {
+  var headerContent = document.getElementsByClassName('header-content')[0];
+  if (headerContent) {
+    var newHeaderHeight = headerContent.offsetHeight;
+    document.documentElement.style.setProperty("--header-height", `${newHeaderHeight}px`);
+    console.log('HeaderContentHeight:', newHeight,)
+  };
+};
+// リサイズ時の処理
+updateHeaderHeight();
+window.addEventListener('resize', updateHeaderHeight);

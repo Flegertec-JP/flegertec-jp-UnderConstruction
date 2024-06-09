@@ -134,7 +134,8 @@
 /* mix-blend-mode: difference; */
 
 :root{
-  --frame-line-bg: #e1e1e1;
+  --frame-line-bg: #000000;
+  /* --frame-line-bg: #e1e1e1; */
   --frame-content-color: #909090;
   --frame-height: max(20px, 4.25vmin);
 }
