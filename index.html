@@ -1,26 +1,37 @@
+<!-- 
+  
+  恥ずかしいから見ないで。
+
+-->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Flegertecは主にWeb制作をするプログラミングチーム。">
     <meta property="og:locale" content="ja_JP">
+    <meta name="description" content="Flegertecは主にWeb制作をするプログラミングチーム。">
     <meta property="og:title" content="Flegertec">
-    <meta property="og:site_name" content="FLEGERTEC Top">
     <meta property="og:description" content="Flegertecは主にWeb制作をするプログラミングチーム。">
-    <meta property="og:image" content="https://flegertec-jp.github.io/flegertec-jp-UnderConstruction/twitter_card.png">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <meta property="og:site_name" content="Flegertec">
+    <meta property="og:description" content="Flegertecは主にWeb制作をするプログラミングチーム。">
+    <meta property="og:image" content="https://flegertec-jp.github.io/flegertec-jp-UnderConstruction/card.png">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flegertec">
+    <meta name="twitter:description" content="Flegertecは主にWeb制作をするプログラミングチーム。">
+    <meta name="twitter:image:type" type="image/png">
+    <meta name="twitter:image" content="https://flegertec-jp.github.io/flegertec-jp-UnderConstruction/twitter_card.png">
     <meta property="og:url" content="https://flegertec-jp.github.io/flegertec-jp-UnderConstruction/">
+    <link rel="apple-touch-icon" sizes="400x400" href="icon.png">
     <meta property="og:type" content="website">
-    <meta name="google" content="nositelinkssearchbox">
-    <meta name="format-detection" content="telephone=no">
-    <title>FLEGERTEC</title>
+    <title>Flegertec</title>
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/frame.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/grid.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script> 
   </head>
@@ -61,7 +72,7 @@
       <!-- Flegertec-Top -->
       <header class="header">
         <div style=" display: flex; justify-content: space-between; align-items: start;">
-					<img src="src/svg/flegertec_dark.svg" style="height : var(--header-height);" alt="Logo">
+					<img src="svg/flegertec_dark.svg" style="height : var(--header-height);" alt="Logo">
           <div class="header-content">
             <div class="header-links">
               <a class="header-link" href="#about">About</a>
@@ -96,7 +107,7 @@
             <h1 class="title">About US</h1>
             <div class="title-line"></div>
             <p class="article" style="font-size: 1.8rem;">
-              <img src="src/svg/flegertec_dark.svg" style="height: 1rem; display: inline-block;" alt="Flegertec">
+              <img src="svg/flegertec_dark.svg" style="height: 1rem; display: inline-block;" alt="Flegertec">
               は主にWeb制作をするプログラミングチーム。
               <br>
               「プログラミング」はもちろん、「動画制作」や「画像編集」、「音声/音楽制作」
@@ -207,11 +218,11 @@
                   <a @click="Huri = false" x-show="Huri">&times;</a>
                 </p>
                 <p class="member-open">
-                  <a @click="aAa = true" x-show="!aAa">Atuatu Hhakumai</a>
+                  <a @click="aAa = true" x-show="!aAa">Atuatu_Hhakumai</a>
                   <a @click="aAa = false" x-show="aAa">&times;</a>
                 </p>
                 <p class="member-open">
-                  <a @click="khaua = true" x-show="!khaua">khaua(かはうあ)</a>
+                  <a @click="khaua = true" x-show="!khaua">khaua</a>
                   <a @click="khaua = false" x-show="khaua">&times;</a>
                 </p>
               </div>
@@ -219,7 +230,7 @@
               <div class="member is-shaddow-SK0528JP" x-show="SK0528JP" data-member="SK0528JP"  @click="updateZIndex('SK0528JP')">
                 <div class="member-tab is-SK0528JP">
                   <div class="member-title"> 
-                    <img class="icon" src="src/image/SK.png" alt="">
+                    <img class="icon" src="image/SK.png" alt="">
                     <span>
                       SK0528JP
                     </span>
@@ -243,7 +254,7 @@
               <div class="member is-shaddow-egger" x-show="Egger" data-member="Egger"  @click="updateZIndex('Egger')">
                 <div class="member-tab is-egger">
                   <div class="member-title"> 
-                    <img class="icon" src="src/image/Egger.jpeg" alt="">
+                    <img class="icon" src="image/Egger.jpeg" alt="">
                     <span>
                       Egger
                     </span>
@@ -267,7 +278,7 @@
               <div class="member is-shaddow-Huri" x-show="Huri" data-member="Huri"  @click="updateZIndex('Huri')">
                 <div class="member-tab is-Huri">
                   <div class="member-title"> 
-                    <img class="icon" src="src/image/Huri.png" alt="">
+                    <img class="icon" src="image/Huri.png" alt="">
                     <span>
                       Hurisan
                     </span>
@@ -291,7 +302,7 @@
               <div class="member is-shaddow-aAa" x-show="aAa" data-member="aAa"  @click="updateZIndex('aAa')">
                 <div class="member-tab is-aAa">
                   <div class="member-title"> 
-                    <img class="icon" src="src/image/Atuatu_Hhakumai.jpg" alt="">
+                    <img class="icon" src="image/Atuatu_Hhakumai.jpg" alt="">
                     <span>
                       Atuatu_Hhakumai
                     </span>
@@ -315,9 +326,9 @@
               <div class="member is-shaddow-khaua" x-show="khaua" data-member="khaua">
                 <div class="member-tab is-khaua">
                   <div class="member-title"> 
-                    <img class="icon" src="src/image/khaua.png" alt="">
+                    <img class="icon" src="image/khaua.png" alt="">
                     <span>
-                    	khaua(かはうあ)
+                    	khaua
                     </span>
                   </div>
                   <div class="member-close" @click="khaua = false">
@@ -350,7 +361,7 @@
             <!-- フッター リンク -->
             <div class="footer-content">
               <div class="footer-block" style="width: calc(var(--column-width) * 4);">
-                <h1>Contact</h1>
+                <h1 class="footer-link-title">Contact</h1>
                 <ul class="footer-links">
                   <li class="footer-link">
                     <a href="mailto:flegertec@gmail.com"">flegertec@gmail.com</a>
@@ -358,7 +369,7 @@
                 </ul>
               </div>
               <div class="footer-block" style="width: calc(var(--column-width) * 4);">
-                <p>Social</p>
+                <h1 class="footer-link-title">Social</h1>
                 <ul class="footer-links">
                   <li class="footer-link">
                     <a href="https://x.com/Flegertec">Twitter(X)</a>
@@ -369,14 +380,17 @@
                 </ul>
               </div>
               <div class="footer-block">
-                <a href="https://github.com/Flegertec-JP">GitHub</a>
+                <ul class="footer-links">
+                  <li class="footer-link">
+                    <a href="https://github.com/Flegertec-JP">GitHub</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <img src="src/svg/flegertec_dark.svg" style="width: 100%;" alt="">
-      </section>
-
+        <img src="svg/flegertec_dark.svg" style="width: 100%;" alt="">
+      </footer>
     </main>
     
     <main class="tablet">
@@ -401,7 +415,7 @@
       <section class="section is-fullheight">
         <div class="section-body">
           <div class="container">
-            <img src="src/svg/flegertec_dark.svg" style="width : calc(var(--column-width) * 12);" alt="Logo">
+            <img src="svg/flegertec_dark.svg" style="width : calc(var(--column-width) * 12);" alt="Logo">
           </div>
         </div>
       </section>
@@ -429,7 +443,7 @@
       <section class="section is-fullheight">
         <div class="section-body">
           <div class="container">
-            <img src="src/svg/flegertec_dark.svg" style="width : calc(var(--column-width) * 12);" alt="Logo">
+            <img src="svg/flegertec_dark.svg" style="width : calc(var(--column-width) * 12);" alt="Logo">
           </div>
         </div>
       </section>

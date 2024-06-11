@@ -94,10 +94,10 @@ works.forEach((work) => {
 
 
 gsap.to(".header" , {
-  y: "60%",
+  y: "95%",
   scrollTrigger: {
     trigger: "#container-1",
-		scrub: 0.03,
+		scrub: true,
   },
 });
 

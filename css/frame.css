@@ -98,7 +98,7 @@
   width: 100%;
   top: 0;
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .frame-line-left{
@@ -108,7 +108,7 @@
   left: 0;
   top: 0;
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .frame-line-right{
@@ -118,7 +118,7 @@
   right: 0;
   top: 0;
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .frame-line-bottom{
@@ -128,7 +128,7 @@
   right: 0;
   bottom: 0;
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
 }
 
 /* mix-blend-mode: difference; */
