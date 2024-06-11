@@ -23,11 +23,11 @@ if (mobile && desktop) {
   }
 } else {
   console.error("Required elements are not found in the DOM.");
-}
+};
+
 
 // スクロールインジゲーター
 const indicatorInner = document.querySelectorAll(".indicator-inner");
-const indicatorCounter = document.getElementById('indicator-counter');
 // スクロールと連動してインジゲーターの高さを１００％に
 gsap.to(indicatorInner , {
   height: "100%",
