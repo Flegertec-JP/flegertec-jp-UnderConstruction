@@ -27,6 +27,8 @@ if (isFirstTimeVisit()) {
     y: "300px",
     ease: "power2.inOut",
   }).to(indicatorInner, {
+    delay: 0,
+    duration: 0,
     y: "0", 
   });
   const LoadingTL = gsap.timeline({ delay: 3, });
@@ -38,9 +40,12 @@ if (isFirstTimeVisit()) {
   const LoadingOverflowTL = gsap.timeline();
   LoadingOverflowTL.to(body, {
     overflow: "hidden",
+    cursor: "progress",
   }).to(body, {
     delay: 3,
+    duration: 0,
     overflow: "auto",
+    cursor: "auto",
   });
 }else{
   const LoadingIndicatorTL = gsap.timeline();
@@ -55,6 +60,8 @@ if (isFirstTimeVisit()) {
     y: "300px",
     ease: "power2.inOut",
   }).to(indicatorInner, {
+    delay: 0,
+    duration: 0,
     y: "0", 
   });
   const LoadingTL = gsap.timeline({ delay: 1, });
@@ -66,8 +73,11 @@ if (isFirstTimeVisit()) {
   const LoadingOverflowTL = gsap.timeline();
   LoadingOverflowTL.to(body, {
     overflow: "hidden",
+    cursor: "progress",
   }).to(body, {
     delay: 1,
+    duration: 0,
     overflow: "auto",
+    cursor: "auto",
   });
 }

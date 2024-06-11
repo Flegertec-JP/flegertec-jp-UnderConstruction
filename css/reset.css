@@ -9,7 +9,7 @@ html{
   min-width: 350px;
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-behavior: smooth;
+  scroll-behavior: none;
   overscroll-behavior: none;
 }
 
@@ -37,7 +37,7 @@ a{
 }
 
 body {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: 0; /* Firefox */
   -ms-overflow-style: none; /* Edge */
 }
 
@@ -73,8 +73,8 @@ ul{
 
 img {
   display: block;
-  -webkit-user-drag: none; /* Chrome, Safari, Opera */
-  -khtml-user-drag: none; /* Konqueror */
-  -moz-user-drag: none; /* Firefox */
-  -o-user-drag: none; /* Presto */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }

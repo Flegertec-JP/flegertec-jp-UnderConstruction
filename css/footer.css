@@ -4,7 +4,6 @@
   flex-direction: column;
   margin-top: var(--header-height);
   padding: calc(var(--frame-height) - 5px)  var(--frame-height);
-  height: calc(85 * var(--vh));
 }
 
 .footer-body {
@@ -16,11 +15,10 @@
 
 .footer-content{
   display: flex;
-  padding-top: calc(var(--frame-height) + 1rem);
+  padding-top: 1rem;
 }
 
 .footer-line{
-  margin-bottom: 1rem;
   height: 1px;
   background-color: currentColor;
   width: calc(var(--column-width) * 12);

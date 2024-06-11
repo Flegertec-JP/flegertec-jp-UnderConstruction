@@ -32,6 +32,19 @@ if (mobile && desktop) {
   console.error("Required elements are not found in the DOM.");
 }
 
+// スムーズスクロール
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    gsap.to(window, {
+      duration: 1,
+      ease: "expo.out",
+      scrollTo: target,
+    });
+  });
+});
+
 // スクロールと連動してインジゲーターの高さを１００％に
 gsap.to(indicatorInner , {
   height: "100%",
@@ -95,7 +108,6 @@ works.forEach((work) => {
     });
   });
 });
-
 
 gsap.to(".header" , {
   y: "95%",
