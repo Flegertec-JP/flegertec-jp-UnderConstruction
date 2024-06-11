@@ -2,6 +2,7 @@
 const body = document.querySelector("html");
 const loading = document.querySelector(".loading");
 const loadingInner = document.querySelector(".loading-content");
+const indicatorInner = document.querySelectorAll(".indicator-inner");
 
 function isFirstTimeVisit() {
   var isFirstTime = sessionStorage.getItem("isFirstTimeVisit");
@@ -11,7 +12,7 @@ function isFirstTimeVisit() {
   } else {
       return false;
   }
-}
+};
 
 if (isFirstTimeVisit()) {
   const LoadingIndicatorTL = gsap.timeline();
@@ -41,10 +42,10 @@ if (isFirstTimeVisit()) {
     delay: 3,
     overflow: "auto",
   });
-} else {
+}else{
   const LoadingIndicatorTL = gsap.timeline();
   LoadingIndicatorTL.to(indicatorInner, {
-    duration: 1.5,
+    duration: 1,
     y: "0",
     height: "100%",
     ease: "power4.inOut",
@@ -56,7 +57,7 @@ if (isFirstTimeVisit()) {
   }).to(indicatorInner, {
     y: "0", 
   });
-  const LoadingTL = gsap.timeline({ delay: 1.5, });
+  const LoadingTL = gsap.timeline({ delay: 1, });
   LoadingTL.to(loading, {
     duration: 0.5,
     autoAlpha: 0,
@@ -66,7 +67,7 @@ if (isFirstTimeVisit()) {
   LoadingOverflowTL.to(body, {
     overflow: "hidden",
   }).to(body, {
-    delay: 1.5,
+    delay: 1,
     overflow: "auto",
   });
-};
+}

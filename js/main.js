@@ -1,3 +1,10 @@
+
+window.onload = function() {
+  window.scrollTo(0, 0);
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
+
 // 高さをデバイスの画面ピッタリに
 const fullHeight = () => {
   const vh = window.innerHeight * 0.01;
@@ -23,11 +30,8 @@ if (mobile && desktop) {
   }
 } else {
   console.error("Required elements are not found in the DOM.");
-};
+}
 
-
-// スクロールインジゲーター
-const indicatorInner = document.querySelectorAll(".indicator-inner");
 // スクロールと連動してインジゲーターの高さを１００％に
 gsap.to(indicatorInner , {
   height: "100%",
